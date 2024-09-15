@@ -5,7 +5,10 @@ import img2 from '/src/assets/images/img2.png';
 import img3 from '/src/assets/images/img3.png';
 import img4 from '/src/assets/images/img4.png';
 import img5 from '/src/assets/images/img5.png';
+import img6 from '/src/assets/images/img6.png';
+import img7 from '/src/assets/images/img7.png';
 import SampleImage from '/src/components/SampleImage/SampleImage.jsx';
+
 
 export default function FileUpload() {
   const [file, setFile] = useState(null);
@@ -15,7 +18,7 @@ export default function FileUpload() {
   const [resStatus, setResStatus] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [seeSample, setSeeSample] = useState(false);
-  const samples = [img1, img2, img3, img4, img5];
+  const samples = [img1, img2, img3, img4, img5,img6,img7];
 
   const formatResponse = (data, wordsPerLine = 10) => {
     const text = data
@@ -35,6 +38,7 @@ export default function FileUpload() {
   function toggleSampleVisibility(){
     setSeeSample(seeSample=>!seeSample)
   }
+  
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
     if (selectedFile) {
