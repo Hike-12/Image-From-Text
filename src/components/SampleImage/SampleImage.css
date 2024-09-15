@@ -1,0 +1,18 @@
+/* SampleImage.css */
+.sample-image-container {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.5rem;
+  }
+  
+  .sample-image {
+    max-width: 100px;
+    height: auto;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .sample-image-container:hover .sample-image {
+    border-color: #007bff;
+  }
+  

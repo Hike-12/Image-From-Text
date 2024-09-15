@@ -1,0 +1,82 @@
+/* General Styles */
+.files {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 100vh; /* Ensure the container uses full viewport height */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Response Box */
+#response {
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: aliceblue;
+    padding: 1rem;
+    width: 100%;
+    max-width: 80vw; /* Adjusted for fluid layout */
+    max-height: 60vh; /* Ensure it doesn't exceed viewport height */
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    overflow-wrap: break-word; /* Ensure words break to fit the container */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling if necessary */
+    line-height: 1.5; /* Improved readability */
+    text-align: justify; /* Optional: ensures text is aligned and wraps properly */
+}
+
+/* Image Styles */
+.image {
+    width: 100%;
+    max-width: 100%; /* Allow image to scale with parent */
+    height: auto;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    box-sizing: border-box; /* Ensure padding/margins are accounted for */
+}
+
+/* Response Container */
+.res {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button Styles */
+#uploadButton {
+    margin: 1rem;
+    cursor: pointer; /* Added cursor style for better UX */
+}
+
+#uploadButton:hover {
+    background-color: #f0f0f0; /* Hover effect */
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 700px) {
+    #response {
+        padding: 1.25rem;
+        max-width: 70vw; /* Adjusted for larger screens */
+    }
+
+    .image {
+        max-width: 70vw; /* Match image width to response box */
+    }
+}
+
+@media (min-width: 1024px) {
+    #response {
+        padding: 1.5rem;
+        max-width: 60vw; /* Adjusted for desktop screens */
+    }
+
+    .image {
+        max-width: 60vw; /* Match image width to response box */
+    }
+}
