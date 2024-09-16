@@ -27,7 +27,7 @@ const Help = () => {
 
   return (
     <div>
-      <button onClick={toggleHelp}>{!helpStatus ? "Help" : "Close"}</button>
+      <button onClick={toggleHelp}>{!helpStatus ? "How To Use" : "Close"}</button>
       {helpStatus && (
         <div className="popup-overlay">
           <div className="popup-content" ref={popupRef} tabIndex="-1">
