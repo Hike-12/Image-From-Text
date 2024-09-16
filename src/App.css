@@ -11,9 +11,13 @@
 }
 .help{
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    align-self: flex-end;
     text-align: left;
     margin: 1rem;
     padding: 1rem;
 }
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+  }

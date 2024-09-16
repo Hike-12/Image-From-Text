@@ -6,7 +6,8 @@
     padding: 1rem;
     box-sizing: border-box;
     height: 100vh; /* Ensure the container uses full viewport height */
-    overflow: auto; /* Allow scrolling if content overflows */
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Response Box */
@@ -52,6 +53,8 @@
 #uploadButton {
     margin: 1rem;
     cursor: pointer; /* Added cursor style for better UX */
+    color: aqua;
+    background-color: blue;
 }
 
 #uploadButton:hover {
@@ -78,5 +81,87 @@
 
     .image {
         max-width: 60vw; /* Match image width to response box */
+    }
+}
+
+/* From Uiverse.io by csemszepp */ 
+.custom-file-upload {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background-color: #212121;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+  }
+  
+  .custom-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-file-upload .icon svg {
+    height: 80px;
+    fill: #e8e8e8;
+  }
+  
+  .custom-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+  }
+  
+  .custom-file-upload input {
+    display: none;
+  }
+  @media (max-width: 599px) {
+    .custom-file-upload {
+        height: 150px;
+        width: 240px;
+        padding: 1rem;
+    }
+
+    .custom-file-upload .icon svg {
+        height: 60px;
+    }
+}
+
+/* For screens between 600px and 899px */
+@media (min-width: 600px) and (max-width: 899px) {
+    .custom-file-upload {
+        height: 180px;
+        width: 260px;
+        padding: 1.25rem;
+    }
+
+    .custom-file-upload .icon svg {
+        height: 70px;
+    }
+}
+
+/* For screens 900px and larger */
+@media (min-width: 900px) {
+    .custom-file-upload {
+        height: 200px;
+        width: 300px;
+        padding: 1.5rem;
+    }
+
+    .custom-file-upload .icon svg {
+        height: 80px;
     }
 }
