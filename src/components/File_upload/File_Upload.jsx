@@ -118,8 +118,8 @@ export default function FileUpload() {
         </div>
         <input type="file" id="fileInput" onChange={handleFileChange} />
       </label>
-      <div className='files'>
         {uploading && <p>Uploading...</p>}
+      <div className='files'>
         <div className='res'>
           {imageUrl && (<img className='image' src={imageUrl} alt="Image preview" />)}
           {resStatus && <p id="response">{error ? error : response}</p>}

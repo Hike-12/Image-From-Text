@@ -1,23 +1,81 @@
-.itt{
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Use a generic font for better compatibility */
+  }
+  
+  /* App Container */
+  .app-container {
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* File Scroller */
+  .file-scroller {
+    flex: 1; /* Allows the container to grow and shrink as needed */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  /* Inner Container */
+  .itt {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    height: 100vh;
-}
-.title{
-    margin:1rem;
-}
-.help{
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Title Styles */
+  .title {
+    margin: 1rem;
+  }
+  
+  /* Help Component Styles */
+  .help {
     display: flex;
-    align-self: flex-end;
+    align-self: flex-start; /* Align to the top-left by default */
     text-align: left;
     margin: 1rem;
     padding: 1rem;
-}
-h1 {
+    width: 100%;
+  }
+  
+  /* Heading Styles */
+  h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     color: #333;
+    margin: 0; /* Remove default margin to avoid spacing issues */
   }
+  
+  /* Responsive Design */
+  @media (max-width: 599px) {
+    .itt {
+      height: auto; /* Allow content to expand naturally */
+      padding: 0.5rem;
+    }
+  
+    .title h1 {
+      font-size: 1.8rem;
+    }
+  
+    .help {
+      align-self: center; /* Center help component for smaller screens */
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 899px) {
+    .itt {
+      padding: 1rem;
+    }
+  
+    .title h1 {
+      font-size: 2.2rem;
+    }
+  }
+  

@@ -6,8 +6,8 @@
     padding: 1rem;
     box-sizing: border-box;
     height: 100vh; /* Ensure the container uses full viewport height */
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
 }
 
 /* Response Box */
